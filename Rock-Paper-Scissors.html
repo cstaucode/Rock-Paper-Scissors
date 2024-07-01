@@ -14,6 +14,7 @@
         // assign scissors variable to a number
         //output computerChoice
     // end function
+
         function getComputerChoice() {
             let computerChoice = (Math.floor(Math.random() * 3 + 1));
             if (computerChoice == 1) {
@@ -24,6 +25,7 @@
                 var computerSelection = "scissors"
             }
         }
+
     // declare function called getHumanChoice
         // prompt "Rock, Paper, or Scissors?"
         //IF input = rock (case insensitive)
@@ -36,9 +38,21 @@
             //output "Invalid Choice. Rock, Paper, or Scissors?"
     //END function
 
+        function getHumanChoice() {
+            let humanPrompt = prompt("Rock, paper, or scissors?");
+            if ((/rock/i.test(humanPrompt))&&(!(/paper/i.test(humanPrompt)))&&(!(/scissors/i.test(humanPrompt)))) {
+                var humanChoice = "rock";
+            } else if ((/paper/i.test(humanPrompt))&&(!(/rock/i.test(humanPrompt)))&&(!(/scissors/i.test(humanPrompt)))) {
+                var humanChoice = "paper";
+            } else if ((/scissors/i.test(humanPrompt))&&(!(/rock/i.test(humanPrompt)))&&(!(/paper/i.test(humanPrompt)))) {
+              var  humanChoice = "scissors";
+            } else {
+                alert("Invalid choice! Please choose rock, paper or scissors!")
+            }
+            console.log(humanChoice)
+        }
     //declare variable for computerScore
     //declare variable for humanScore
-
     //FOR loop starting at 0 for computerScore
     //FOR loop starting at 0 for humanScore
     
