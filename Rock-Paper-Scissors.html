@@ -16,7 +16,13 @@
     // end function
         function getComputerChoice() {
             let computerChoice = (Math.floor(Math.random() * 3 + 1));
-            
+            if (computerChoice == 1) {
+                var computerSelection = "rock"
+            } else if (computerChoice == 2) {
+                var computerSelection = "paper"
+            } else {
+                var computerSelection = "scissors"
+            }
         }
     // declare function called getHumanChoice
         // prompt "Rock, Paper, or Scissors?"
