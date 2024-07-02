@@ -16,6 +16,7 @@
         } else {
             var computerSelection = "scissors"
         }
+        return computerSelection;
     }
 
     function getHumanChoice() {
@@ -29,7 +30,7 @@
         } else {
             alert("Invalid choice! Please choose rock, paper or scissors!")
         }
-        console.log(humanChoice)
+        return humanChoice;
     }
 
     let humanScore = 0;
@@ -37,8 +38,6 @@
     let computerScore= 0;
 
    
-
-
     //declare function called playRound with two parameters
     //declare parameters as humanChoice and computerChoice
         //humanSelection = call upon getHumanChoice function
@@ -66,6 +65,37 @@
             //output "You tied!"
     //END function 
 
+    function playRound() {
+       const humanChoice = getHumanChoice()
+       const computerChoice = getComputerChoice()
+
+        if (humanChoice == "rock" && computerChoice == "scissors") {
+            console.log("You won! Rock beats scissors!");
+            console.log("You have " + humanScore.toString() + " points and the computer has " + computerScore.toString() + " points.");
+        } else if (humanChoice == "rock" && computerChoice == "paper") {
+            console.log("rock, paper");
+            console.log("You have " + humanScore.toString() + " points and the computer has " + computerScore.toString() + " points.");
+        } else if (humanChoice == "paper" && computerChoice == "rock") {
+            console.log("paper, rock");
+            console.log("You have " + humanScore.toString() + " points and the computer has " + computerScore.toString() + " points.");
+        } else if (humanChoice == "paper" && computerChoice == "scissors") {
+            console.log('paper, scissors');
+            console.log("You have " + humanScore.toString() + " points and the computer has " + computerScore.toString() + " points.");
+        } else if (humanChoice == "scissors" && computerChoice == "paper") {
+            console.log("scissors, paper");
+            console.log("You have " + humanScore.toString() + " points and the computer has " + computerScore.toString() + " points.");
+        } else if (humanChoice == "scissors" && computerChoice == "rock") {
+            console.log("scissors, rock");
+            console.log("You have " + humanScore.toString() + " points and the computer has " + computerScore.toString() + " points.");
+        } else if (humanChoice === computerChoice) {
+            console.log("You Tied!");
+            console.log("You have " + humanScore.toString() + " points and the computer has " + computerScore.toString() + " points.");
+        } else {
+            console.log("Something isn't right");
+            console.log(humanChoice);
+            console.log(computerChoice);
+        }
+    }
 
     //declare function playGame
         //WHILE human score and computer score < 5 each
