@@ -6,60 +6,37 @@
 </head>
 <body>
   <script>
-    // declare function called getComputerChoice
-        // get random whole number value
-        // assign the output to a variable "computerChoice"
-        // assign rock variable to a number
-        // assign paper variable to a number
-        // assign scissors variable to a number
-        //output computerChoice
-    // end function
-
-        function getComputerChoice() {
-            let computerChoice = (Math.floor(Math.random() * 3 + 1));
-            if (computerChoice == 1) {
-                var computerSelection = "rock"
-            } else if (computerChoice == 2) {
-                var computerSelection = "paper"
-            } else {
-                var computerSelection = "scissors"
-            }
+ 
+    function getComputerChoice() {
+        let computerChoice = (Math.floor(Math.random() * 3 + 1));
+        if (computerChoice == 1) {
+            var computerSelection = "rock"
+        } else if (computerChoice == 2) {
+            var computerSelection = "paper"
+        } else {
+            var computerSelection = "scissors"
         }
+    }
 
-    // declare function called getHumanChoice
-        // prompt "Rock, Paper, or Scissors?"
-        //IF input = rock (case insensitive)
-            // humanChoice = rock
-        //ELSE input = paper (case insensitive)
-            //humanChoice = paper
-        //Else input = scissors, Scissors
-            //humanChoice = scissors (case insensitive)
-        //ELSE 
-            //output "Invalid Choice. Rock, Paper, or Scissors?"
-    //END function
-
-        function getHumanChoice() {
-            let humanPrompt = prompt("Rock, paper, or scissors?");
-            if ((/rock/i.test(humanPrompt))&&(!(/paper/i.test(humanPrompt)))&&(!(/scissors/i.test(humanPrompt)))) {
-                var humanChoice = "rock";
-            } else if ((/paper/i.test(humanPrompt))&&(!(/rock/i.test(humanPrompt)))&&(!(/scissors/i.test(humanPrompt)))) {
-                var humanChoice = "paper";
-            } else if ((/scissors/i.test(humanPrompt))&&(!(/rock/i.test(humanPrompt)))&&(!(/paper/i.test(humanPrompt)))) {
-              var  humanChoice = "scissors";
-            } else {
-                alert("Invalid choice! Please choose rock, paper or scissors!")
-            }
-            console.log(humanChoice)
+    function getHumanChoice() {
+        let humanPrompt = prompt("Rock, paper, or scissors?");
+        if ((/rock/i.test(humanPrompt))&&(!(/paper/i.test(humanPrompt)))&&(!(/scissors/i.test(humanPrompt)))) {
+            var humanChoice = "rock";
+        } else if ((/paper/i.test(humanPrompt))&&(!(/rock/i.test(humanPrompt)))&&(!(/scissors/i.test(humanPrompt)))) {
+            var humanChoice = "paper";
+        } else if ((/scissors/i.test(humanPrompt))&&(!(/rock/i.test(humanPrompt)))&&(!(/paper/i.test(humanPrompt)))) {
+            var  humanChoice = "scissors";
+        } else {
+            alert("Invalid choice! Please choose rock, paper or scissors!")
         }
-        
-    //declare variable for computerScore
-    //declare variable for humanScore
-    //FOR loop starting at 0 for computerScore
-    //FOR loop starting at 0 for humanScore
+        console.log(humanChoice)
+    }
 
     let humanScore = 0;
+
     let computerScore= 0;
-    
+
+   
 
 
     //declare function called playRound with two parameters
