@@ -36,52 +36,33 @@
     let humanScore = 0;
 
     let computerScore= 0;
-
    
-    //declare function called playRound with two parameters
-    //declare parameters as humanChoice and computerChoice
-        //humanSelection = call upon getHumanChoice function
-        //computerSelection = call upon getComputerChoice function
-
-        //IF humanSelection = rock and computer = sissors
-            //call upon loop for humanScore
-        //ELSE human choice is rock and computer = paper
-            //call upon loop for computer score
-        //ELSE human choice = paper and computer = rock
-            //call upon loop for human score
-        //ELSE human choice = paper and computer = scissors
-            //call upon computer score loop  
-        //ELSE human choice = scissors and computer choice = paper
-            //call upon human score loop
-        //ELSE human choice = scissors and computer choice = rock
-            //call upon computer score loop
-    
     function playRound() {
        const humanChoice = getHumanChoice()
        const computerChoice = getComputerChoice()
 
         if (humanChoice == "rock" && computerChoice == "scissors") {
-            console.log("rock, scissors");
+            humanScore++;
             console.log("You won! Rock beats scissors!");
             console.log("You have " + humanScore.toString() + " points and the computer has " + computerScore.toString() + " points.");
         } else if (humanChoice == "rock" && computerChoice == "paper") {
-            console.log("rock, paper");
+            computerScore++;
             console.log("You Lost! Rock is covered by paper!");
             console.log("You have " + humanScore.toString() + " points and the computer has " + computerScore.toString() + " points.");
         } else if (humanChoice == "paper" && computerChoice == "rock") {
-            console.log("paper, rock");
+            humanScore++;
             console.log("You Won! Paper covers rock!");
             console.log("You have " + humanScore.toString() + " points and the computer has " + computerScore.toString() + " points.");
         } else if (humanChoice == "paper" && computerChoice == "scissors") {
-            console.log('paper, scissors');
+            computerScore++;
             console.log("You Lost! Paper is cut by scissors!")
             console.log("You have " + humanScore.toString() + " points and the computer has " + computerScore.toString() + " points.");
         } else if (humanChoice == "scissors" && computerChoice == "paper") {
-            console.log("scissors, paper");
+            humanScore++;
             console.log("You Won! Scissors cuts paper!")
             console.log("You have " + humanScore.toString() + " points and the computer has " + computerScore.toString() + " points.");
         } else if (humanChoice == "scissors" && computerChoice == "rock") {
-            console.log("scissors, rock");
+            computerScore++;
             console.log("You Lost! Rock beats scissors!")
             console.log("You have " + humanScore.toString() + " points and the computer has " + computerScore.toString() + " points.");
         } else if (humanChoice === computerChoice) {
