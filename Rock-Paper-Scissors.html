@@ -34,7 +34,6 @@
     }
 
     let humanScore = 0;
-
     let computerScore= 0;
    
     function playRound() {
@@ -75,16 +74,20 @@
         }
     }
 
-    //declare function playGame
-        //WHILE human score and computer score < 5 each
-            //call upon playRound
-        //END while
-        // IF human score >= 5
-            //output "Congratuatlions! You Have won!"
-        // ELSE computer score >= 5
-            //output "Oh no! The computer has won!"
-    //End function
-        
+        function playGame() {
+            while (humanScore < 5 && computerScore < 5) {
+                playRound();
+            }
+            if (humanScore >= 5) {
+                console.log("Congratulations! You have won!");
+                humanScore = 0;
+                computerScore = 0;
+            } else if (computerScore >= 5) {
+                console.log("Oh no! You have lost! Better luck next time!");
+                humanScore = 0;
+                computerScore = 0;
+            }
+        }
   </script>
 </body>
 </html>
